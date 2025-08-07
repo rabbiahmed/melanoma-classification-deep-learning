@@ -1,4 +1,4 @@
-Melanoma classification using deep learning
+Melanoma classification using deep learning and transfer learning.
 Models: Xception
 # Models: Xception
 ## Evaluation: AUC
