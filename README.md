@@ -1,8 +1,7 @@
 # Melanoma classification using deep learning and transfer learning.
 ## Model: Xception
 ### Rationales for Xception's superiority over Inception
-1. Decoupled Feature Learning (using Depthwise Separable Convolutions)
-   Xception stands for "Extreme Inception". The core difference between Xception and Inception lies in how they perform the fundamental convolution operation, which is critical for feature extraction from images.
+1. Decoupled Feature Learning (using Depthwise Separable Convolutions)  Xception stands for "Extreme Inception". The core difference between Xception and Inception lies in how they perform the fundamental convolution operation, which is critical for feature extraction from images.
 Inception's Approach: The original Inception module uses multiple parallel branches with different sized filters (1 * 1, 3 * 3, 5 * 5) to capture both spatial and cross-channel correlations simultanesously. Then it concatenates the results.
 Xception's Approach: Xception replaces the traditional Inception module with Depthwise Separable Convolutions (DSC). This technique effectively decouples the learning of spatial correlations (e.g., shapes, textures) from cross-channel correlations (e.g., color, intensity changes).
 - First, a depthwise convolution is applied to each input channel separately to learn spatial features.
