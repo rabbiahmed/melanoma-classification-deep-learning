@@ -4,8 +4,8 @@
 1. Decoupled Feature Learning (using Depthwise Separable Convolutions) <br> Xception stands for "Extreme Inception". The core difference between Xception and Inception lies in how they perform the fundamental convolution operation, which is critical for feature extraction from images. <br>
 Inception's Approach: The original Inception module uses multiple parallel branches with different sized filters (1 * 1, 3 * 3, 5 * 5) to capture both spatial and cross-channel correlations simultanesously. Then it concatenates the results. <br>
 Xception's Approach: Xception replaces the traditional Inception module with Depthwise Separable Convolutions (DSC). This technique effectively decouples the learning of spatial correlations (e.g., shapes, textures) from cross-channel correlations (e.g., color, intensity changes).
-  - First, a depthwise convolution is applied to each input channel separately to learn spatial features.
-  - Then, a pointwise convolution (1 * 1) is used to combine the outputs across all channels, learning the cross-channel correlations.
+ - First, a depthwise convolution is applied to each input channel separately to learn spatial features.
+ - Then, a pointwise convolution (1 * 1) is used to combine the outputs across all channels, learning the cross-channel correlations.
 Advantage in Medical Imaging: For complex medical images like dermoscopy (which show fine, intricate, and often subtle textures, borders, and color variations), the decoupled approach in Xception may allow the network to learn these distinct features more efficiently and effectively. Therefore, it would lead to better discrimination between subtle patterns of benign and malignant lesions.
 2. Parameter Efficiency <br>
 DSCs significantly reduce the total number of parameters compared to the multiple standard convolutions used in the Inception model, especially when the number of filters is large.
